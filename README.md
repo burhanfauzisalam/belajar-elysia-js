@@ -18,9 +18,11 @@ bun run dev
 
 ## Routes
 
-get -> /
-get -> /users
-post -> /users
-get -> /users/:id
-put -> /users/:id
-delete -> /users/:id
+| method | path      |
+| ------ | --------- |
+| get    | /         |
+| get    | /users    |
+| post   | /user     |
+| get    | /user/:id |
+| put    | /user/:id |
+| delete | /user/:id |

@@ -7,10 +7,10 @@ const port = 3001;
 const app = new Elysia()
   .get("/", () => handlers.home)
   .get("/users", handlers.allUsers)
-  .post("/users", handlers.addUser)
-  .get("/users/:id", handlers.getUserById)
-  .put("/users/:id", handlers.updateUser)
-  .delete("/users/:id", handlers.deleteUser);
+  .post("/user", handlers.addUser)
+  .get("/user/:id", handlers.getUserById)
+  .put("/user/:id", handlers.updateUser)
+  .delete("/user/:id", handlers.deleteUser);
 
 app.listen(port);
 console.log(`Server berjalan di http://localhost:${port}`);
