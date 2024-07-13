@@ -2,12 +2,13 @@
   "name": "elysia-js",
   "version": "1.0.50",
   "scripts": {
-    "dev": "bun dev",
+    "dev": "bun run --watch src/index.ts",
     "build": "bun build src/index.ts",
     "start": "NODE_ENV=production bun src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "elysia": "latest",
+    "mysql2": "^3.10.2"
   },
   "devDependencies": {
     "bun-types": "latest"

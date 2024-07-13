@@ -1,11 +1,16 @@
+// index.ts
 import { Elysia } from "elysia";
+import handlers from "./handlers";
+
+const port = 3001;
 
 const app = new Elysia()
-  .get("/", () => {
-    message: "hello";
-  })
-  .listen(3000);
+  .get("/", () => handlers.home)
+  .get("/users", handlers.allUsers)
+  .post("/users", handlers.addUser)
+  .get("/users/:id", handlers.getUserById)
+  .put("/users/:id", handlers.updateUser)
+  .delete("/users/:id", handlers.deleteUser);
 
-console.log(
-  `🦊 Elysia is running at ${app.server?.hostname}:${app.server?.port}`
-);
+app.listen(port);
+console.log(`Server berjalan di http://localhost:${port}`);
